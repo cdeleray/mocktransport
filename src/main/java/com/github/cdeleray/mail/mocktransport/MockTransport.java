@@ -141,10 +141,10 @@ public class MockTransport extends Transport implements MessageFaultMock {
     synchronized(this) {
       msg.saveChanges(); //as the javadoc says
 
-      if(successBarrier > 0) {
+      if (successBarrier > 0) {
         int value = random.nextInt(CENT_PER_CENT + 1); //take a random value within the [0,100] range
 
-        if(value < successBarrier) {
+        if (value < successBarrier) {
           notifyTransportListeners(MESSAGE_NOT_DELIVERED, new Address[0], addresses, new Address[0], msg);
           throw new MessagingException("sendMessage has failed");
         }
@@ -162,7 +162,7 @@ public class MockTransport extends Transport implements MessageFaultMock {
 
   @Override
   public void connect(String host, int port, String user, String password) {
-    synchronized(this) {
+    synchronized (this) {
       setConnected(true);
       notifyConnectionListeners(ConnectionEvent.OPENED);
     }
@@ -196,7 +196,7 @@ public class MockTransport extends Transport implements MessageFaultMock {
    */
   @Override
   public final void setFailureRate(int failureRate) {
-    if(failureRate < 0 || failureRate > 100) {
+    if (failureRate < 0 || failureRate > 100) {
       throw new IllegalArgumentException("The failure rate must be in the range [0, 100].");
     }
 
@@ -223,7 +223,7 @@ public class MockTransport extends Transport implements MessageFaultMock {
 
   @Override
   protected void queueEvent(MailEvent event, Vector vector) {
-    if(eventDispatchStrategy == EventDispatchStrategy.ASYNCHRONOUS) {
+    if (eventDispatchStrategy == EventDispatchStrategy.ASYNCHRONOUS) {
       super.queueEvent(event, vector);
     }
     else {
@@ -235,7 +235,7 @@ public class MockTransport extends Transport implements MessageFaultMock {
 
   /** Appends the given patterns to the given list. */
   private void addPatterns(List<Pattern> patterns, String[] regexes) {
-    synchronized(this) {
+    synchronized (this) {
       Stream.of(regexes)
           .map(regex -> Pattern.compile(regex, CASE_INSENSITIVE))
           .forEach(patterns::add);
@@ -246,10 +246,9 @@ public class MockTransport extends Transport implements MessageFaultMock {
    * a pattern among those specified by {@code patterns}, and removes them
    * from {@code addresses}. */
   private Address[] removeMatched(List<Address> addresses, List<Pattern> patterns) {
-    Address[] retained =
-        addresses.stream()
-            .filter(address -> patterns.stream().anyMatch(pattern -> pattern.matcher(address.toString()).matches()))
-            .toArray(Address[]::new);
+    Address[] retained = addresses.stream()
+        .filter(address -> patterns.stream().anyMatch(pattern -> pattern.matcher(address.toString()).matches()))
+        .toArray(Address[]::new);
 
     addresses.removeAll(asList(retained));
     return retained;
