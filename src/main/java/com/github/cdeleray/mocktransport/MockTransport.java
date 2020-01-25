@@ -80,6 +80,14 @@ import javax.mail.event.TransportListener;
  * the {@link Session} class and the code of its {@link Session#getTransport()
  * getTransport} method for further details).
  *
+ * <p>
+ * A typical use of this this class is to specify in the classpath a file named
+ * {@code /META-INF/javamail.providers} file that contains a line as in the
+ * following:
+ * <pre>
+ * {@code protocol=smtp; type=transport; class=com.github.cdeleray.mocktransport.MockTransport}
+ * </pre>
+ *
  * @author Christophe Deleray
  */
 public class MockTransport extends Transport {
