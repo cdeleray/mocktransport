@@ -1,7 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="35c9a228-6cfb-4f6d-8ec0-3ab6ccf17c36" name="Default Changelist" comment="" />
+    <list default="true" id="35c9a228-6cfb-4f6d-8ec0-3ab6ccf17c36" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/copyright/MIT_Licence.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LICENCE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mock-transport.iml" beforeDir="false" afterPath="$PROJECT_DIR$/mocktransport.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/cdeleray/mail/mocktransport/MessageFaultMock.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/cdeleray/mail/mocktransport/MockTransport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/cdeleray/mocktransport/MockTransport.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,6 +30,13 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="C:\Users\Christophe\intellij\mock-transport\.idea" />
+      </set>
+    </option>
+  </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
       <MavenImportingSettings>
@@ -25,6 +45,7 @@
     </option>
   </component>
   <component name="ProjectId" id="1WGA9H4U9fEhJDLUGGMGmYtDisL" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -35,9 +56,10 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="copyright.profiles" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -67,32 +89,88 @@
       <option name="presentableId" value="Default" />
       <updated>1578765404589</updated>
     </task>
+    <task id="LOCAL-00001" summary="First commit">
+      <created>1579553061604</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1579553061604</updated>
+    </task>
+    <task id="LOCAL-00002" summary="indentation">
+      <created>1579553868495</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1579553868495</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="First commit" />
+    <MESSAGE value="indentation" />
+    <option name="LAST_COMMIT_MESSAGE" value="indentation" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="327" y="0" key="CommitChangelistDialog2" timestamp="1579552948155">
+    <state x="275" y="23" key="#Plugins" timestamp="1579641072637">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="327" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1579552948155" />
+    <state x="275" y="23" key="#Plugins/0.0.1366.728@0.0.1366.728" timestamp="1579641072637" />
+    <state x="445" y="168" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1579971650124">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="445" y="168" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1579971650124" />
+    <state x="413" y="112" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1579972027291">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="413" y="112" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1579972027291" />
+    <state x="327" y="0" key="CommitChangelistDialog2" timestamp="1579972323060">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="327" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1579972323060" />
     <state x="463" y="120" key="FileChooserDialogImpl" timestamp="1579552880153">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="120" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1579552880153" />
-    <state x="163" y="0" key="SettingsEditor" timestamp="1578765900564">
+    <state x="546" y="258" key="Github.ShareDialog" timestamp="1579553179430">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="163" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1578765900564" />
+    <state x="546" y="258" key="Github.ShareDialog/0.0.1366.728@0.0.1366.728" timestamp="1579553179430" />
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1579730143981">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1579730143981" />
+    <state width="1323" height="179" key="GridCell.Tab.0.center" timestamp="1579730143981">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1579730143981" />
+    <state width="1323" height="179" key="GridCell.Tab.0.left" timestamp="1579730143981">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1579730143981" />
+    <state width="1323" height="179" key="GridCell.Tab.0.right" timestamp="1579730143981">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1579730143981" />
+    <state x="163" y="0" key="SettingsEditor" timestamp="1579972125476">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="163" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1579972125476" />
     <state x="404" y="105" width="570" height="524" key="StructurePopup" timestamp="1579362405264">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="404" y="105" width="570" height="524" key="StructurePopup/0.0.1366.728@0.0.1366.728" timestamp="1579362405264" />
+    <state x="275" y="98" key="Vcs.Push.Dialog.v2" timestamp="1579640776939">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="98" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1579640776939" />
     <state x="65" y="0" key="new project wizard" timestamp="1578767890884">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="65" y="0" key="new project wizard/0.0.1366.728@0.0.1366.728" timestamp="1578767890884" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1578765996596">
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1579972148451">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1578765996596" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1579972148451" />
   </component>
 </project>

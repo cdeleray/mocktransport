@@ -6,11 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="mock-transport" />
+        <module name="mocktransport" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="mock-transport" target="11" />
+      <module name="mocktransport" target="11" />
     </bytecodeTargetLevel>
   </component>
 </project>

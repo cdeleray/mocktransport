@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/mock-transport.iml" filepath="$PROJECT_DIR$/mock-transport.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mocktransport.iml" filepath="$PROJECT_DIR$/mocktransport.iml" />
     </modules>
   </component>
 </project>

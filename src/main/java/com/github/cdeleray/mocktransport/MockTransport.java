@@ -1,4 +1,28 @@
-package com.github.cdeleray.mail.mocktransport;
+/*
+ * MIT License
+ *
+ * Copyright (c) 2020 Christophe Deleray
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all
+ * copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * SOFTWARE.
+ */
+
+package com.github.cdeleray.mocktransport;
 
 import static java.util.Arrays.asList;
 import static java.util.regex.Pattern.CASE_INSENSITIVE;
@@ -25,6 +49,7 @@ import javax.mail.URLName;
 import javax.mail.event.ConnectionEvent;
 import javax.mail.event.MailEvent;
 import javax.mail.event.TransportEvent;
+import javax.mail.event.TransportListener;
 
 /**
  * A {@code MockTransport} object represents a mock implementation
@@ -57,7 +82,7 @@ import javax.mail.event.TransportEvent;
  *
  * @author Christophe Deleray
  */
-public class MockTransport extends Transport implements MessageFaultMock {
+public class MockTransport extends Transport {
   /** The list of addresses to be considered as invalid. */
   private final List<Pattern> invalidAddresses = new ArrayList<>();
 
@@ -168,17 +193,36 @@ public class MockTransport extends Transport implements MessageFaultMock {
     }
   }
 
-  @Override
+  /**
+   * Records all addresses matching the given patterns so that they are marked
+   * as invalid.
+   *
+   * @param regexes the regular expressions that tell which address a message
+   * will not be delivered to
+   */
   public void markAsInvalid(String... regexes) {
     addPatterns(invalidAddresses, regexes);
   }
 
-  @Override
+  /**
+   * Marks all addresses matching the given patterns so that they are marked as
+   * valid but no message can be sent to.
+   *
+   * @param regexes the regular expressions that tell which address a message
+   * will not be delivered to, even if this recipient is valid
+   */
   public void markAsValidUnsent(String... regexes) {
     addPatterns(validUnsentAddresses, regexes);
   }
 
-  @Override
+  /**
+   * Enables or disables the <em>failure mode</em>, that causes a
+   * {@link MessagingException} and notifies any registered
+   * {@link TransportListener}.
+   *
+   * @param mode {@code true} to activate the <em>failure mode</em>; {@code false}
+   * otherwise
+   */
   public void setFailureMode(boolean mode) {
     this.successBarrier = mode ? CENT_PER_CENT + 1 : 0;
   }
@@ -194,7 +238,6 @@ public class MockTransport extends Transport implements MessageFaultMock {
    * the range [0,100]
    * @throws IllegalArgumentException if {@code failureRate} is not between 0 and 100
    */
-  @Override
   public final void setFailureRate(int failureRate) {
     if (failureRate < 0 || failureRate > 100) {
       throw new IllegalArgumentException("The failure rate must be in the range [0, 100].");
